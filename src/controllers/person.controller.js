@@ -17,6 +17,7 @@ export const generateToken = (req, res, next) => {
     };
     const token = jwt.sign(payload, process.env.SECRET, { expiresIn: "1h" });
     payload.token = token;
+    console.log(token);
     if (token) {
       req.body.payload = payload;
       next();
