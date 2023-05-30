@@ -29,7 +29,7 @@ export const sendEmail = async (req, res) => {
     console.log(payload.payload);
     res.send(payload.payload);
   } catch (error) {
-    console.log(error);
-    res.status(500).send(error);
+    console.log("error", error);
+    res.status(500).send({ error });
   }
 };
