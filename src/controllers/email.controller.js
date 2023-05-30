@@ -30,6 +30,6 @@ export const sendEmail = async (req, res) => {
     res.send(payload.payload);
   } catch (error) {
     console.log(error);
-    res.status(500).send();
+    res.status(500).send(error);
   }
 };
