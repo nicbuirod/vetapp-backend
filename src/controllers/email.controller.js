@@ -18,7 +18,7 @@ export const sendEmail = async (req, res) => {
   const payload = req.body;
   const destinationEmail = payload.email;
   const bodyEmail = {
-    from: "pavas0921@gmail.com",
+    from: "<pavas0921@gmail.com>",
     to: destinationEmail,
     subject: "Notificación de inicio de sesión",
     html: `<p>Se ha iniciado sesión en su cuenta de AppVet con el correo ${destinationEmail} </p>`,
