@@ -14,7 +14,7 @@ import { sendEmail } from "../controllers/email.controller.js";
 const router = express.Router();
 
 //Login
-router.post("/login", login, generateToken, sendEmail);
+router.post("/login", login, generateToken);
 
 //Get all person
 router.get("/", verifyToken, getAllPerson);
