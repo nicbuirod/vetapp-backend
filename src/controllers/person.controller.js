@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 
 const prisma = new PrismaClient();
 
-export const generateToken = (req, res, next) => {
+export const generateToken = (req, res) => {
   try {
     const { person } = req.body;
     const payload = {
@@ -19,7 +19,7 @@ export const generateToken = (req, res, next) => {
     payload.token = token;
     if (token) {
       req.body.payload = payload;
-      next();
+      //next();
     }
     //res.status(200).json({ payload });
   } catch (error) {
